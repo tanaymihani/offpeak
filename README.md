@@ -1,6 +1,8 @@
-# EV Fleet Charging Lab
+# OffPeak
 
-[![ci](https://github.com/tanaymihani/ev-fleet-charging-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/tanaymihani/ev-fleet-charging-lab/actions/workflows/ci.yml)
+*When, where and how electric fleets should charge — from real charging sessions to a robotaxi simulator.*
+
+[![ci](https://github.com/tanaymihani/offpeak/actions/workflows/ci.yml/badge.svg)](https://github.com/tanaymihani/offpeak/actions/workflows/ci.yml)
 
 **When, where and how should an electric fleet charge?** This repository answers that with public data in two connected studies:
 
@@ -187,7 +189,7 @@ The full list is in [`docs/methodology.md`](docs/methodology.md). The most impor
 ## Reproduce
 
 ```bash
-git clone https://github.com/tanaymihani/ev-fleet-charging-lab && cd ev-fleet-charging-lab
+git clone https://github.com/tanaymihani/offpeak && cd offpeak
 make setup        # virtual environment + package (Python >= 3.11)
 make data         # ~160 MB of public data, hashed manifest, processed tables
 make sessions     # Palo Alto study + fleet input validation (~3 min)
