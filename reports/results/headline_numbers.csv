@@ -1,0 +1,317 @@
+name,value,source
+fleet_runs_total,314,fleet_runs.csv
+fleet_runs_depletions,0,fleet_runs.csv
+fleet_runs_max_energy_residual_kwh,2.689936081878841e-06,fleet_runs.csv
+e1_requests_per_run,148945,fleet_runs.csv
+e1_service_orchestrated,0.9612634467907336,fleet_runs.csv
+e1_cost_usd_day_orchestrated,457.1407639182494,fleet_runs.csv
+e1_peak_mw_orchestrated,3.6098370335944394,fleet_runs.csv
+e1_wait_min_orchestrated,6.401286010445719,fleet_runs.csv
+e1_queue_min_orchestrated,17.548633824378047,fleet_runs.csv
+e1_avg_price_orchestrated,28.781315113163156,fleet_runs.csv
+e1_service_queue_aware,0.9288987353605324,fleet_runs.csv
+e1_cost_usd_day_queue_aware,534.5698102565073,fleet_runs.csv
+e1_peak_mw_queue_aware,3.1266831161927984,fleet_runs.csv
+e1_wait_min_queue_aware,6.875357912400349,fleet_runs.csv
+e1_queue_min_queue_aware,2.257716577312409,fleet_runs.csv
+e1_avg_price_queue_aware,35.32883977017719,fleet_runs.csv
+e1_service_threshold_100,0.9156846181127692,fleet_runs.csv
+e1_cost_usd_day_threshold_100,484.78824695472815,fleet_runs.csv
+e1_peak_mw_threshold_100,2.186281124268873,fleet_runs.csv
+e1_wait_min_threshold_100,6.9957602579595655,fleet_runs.csv
+e1_queue_min_threshold_100,26.552183027866885,fleet_runs.csv
+e1_avg_price_threshold_100,33.92546379730842,fleet_runs.csv
+e1_service_threshold_80,0.9274449435783186,fleet_runs.csv
+e1_cost_usd_day_threshold_80,538.4036560390198,fleet_runs.csv
+e1_peak_mw_threshold_80,3.1212957620483848,fleet_runs.csv
+e1_wait_min_threshold_80,6.889814850031632,fleet_runs.csv
+e1_queue_min_threshold_80,4.959285027382075,fleet_runs.csv
+e1_avg_price_threshold_80,35.61742577968559,fleet_runs.csv
+e1_diff_orchestrated_service_rate,0.0338185032124149,fleet_paired.csv
+e1_diff_orchestrated_service_rate_ci,"[0.02984, 0.03779]",fleet_paired.csv
+e1_rel_orchestrated_service_rate,0.0364641625862281,fleet_paired.csv
+e1_diff_orchestrated_wait_mean_min,-0.4885288395859131,fleet_paired.csv
+e1_diff_orchestrated_wait_mean_min_ci,"[-0.5403, -0.4368]",fleet_paired.csv
+e1_rel_orchestrated_wait_mean_min,-0.0709059459825208,fleet_paired.csv
+e1_diff_orchestrated_energy_cost_usd_per_day,-81.26289212077037,fleet_paired.csv
+e1_diff_orchestrated_energy_cost_usd_per_day_ci,"[-91.51, -71.02]",fleet_paired.csv
+e1_rel_orchestrated_energy_cost_usd_per_day,-0.1509330243383061,fleet_paired.csv
+e1_diff_orchestrated_peak_charging_mw,0.4885412715460543,fleet_paired.csv
+e1_diff_orchestrated_peak_charging_mw_ci,"[0.4043, 0.5727]",fleet_paired.csv
+e1_rel_orchestrated_peak_charging_mw,0.1565187373417775,fleet_paired.csv
+e1_diff_orchestrated_queue_wait_mean_min,12.589348796995967,fleet_paired.csv
+e1_diff_orchestrated_queue_wait_mean_min_ci,"[11.85, 13.33]",fleet_paired.csv
+e1_rel_orchestrated_queue_wait_mean_min,2.5385410855567785,fleet_paired.csv
+e1_diff_orchestrated_avg_price_usd_mwh,-6.8361106665224325,fleet_paired.csv
+e1_diff_orchestrated_avg_price_usd_mwh_ci,"[-7.52, -6.152]",fleet_paired.csv
+e1_rel_orchestrated_avg_price_usd_mwh,-0.1919316322523625,fleet_paired.csv
+e1_diff_orchestrated_empty_km_share,0.0132178261669682,fleet_paired.csv
+e1_diff_orchestrated_empty_km_share_ci,"[0.01277, 0.01367]",fleet_paired.csv
+e1_rel_orchestrated_empty_km_share,0.0420954345501937,fleet_paired.csv
+e1_diff_queue_aware_service_rate,0.0014537917822138,fleet_paired.csv
+e1_diff_queue_aware_service_rate_ci,"[-0.001272, 0.00418]",fleet_paired.csv
+e1_rel_queue_aware_service_rate,0.0015675235411869,fleet_paired.csv
+e1_diff_queue_aware_wait_mean_min,-0.0144569376312836,fleet_paired.csv
+e1_diff_queue_aware_wait_mean_min_ci,"[-0.03552, 0.006611]",fleet_paired.csv
+e1_rel_queue_aware_wait_mean_min,-0.0020983056796101,fleet_paired.csv
+e1_diff_queue_aware_energy_cost_usd_per_day,-3.8338457825125376,fleet_paired.csv
+e1_diff_queue_aware_energy_cost_usd_per_day_ci,"[-7.498, -0.1695]",fleet_paired.csv
+e1_rel_queue_aware_energy_cost_usd_per_day,-0.0071207647635934,fleet_paired.csv
+e1_diff_queue_aware_peak_charging_mw,0.0053873541444136,fleet_paired.csv
+e1_diff_queue_aware_peak_charging_mw_ci,"[-0.0466, 0.05738]",fleet_paired.csv
+e1_rel_queue_aware_peak_charging_mw,0.0017259992500288,fleet_paired.csv
+e1_diff_queue_aware_queue_wait_mean_min,-2.701568450069667,fleet_paired.csv
+e1_diff_queue_aware_queue_wait_mean_min_ci,"[-3.272, -2.131]",fleet_paired.csv
+e1_rel_queue_aware_queue_wait_mean_min,-0.5447495828840837,fleet_paired.csv
+e1_diff_queue_aware_avg_price_usd_mwh,-0.2885860095084027,fleet_paired.csv
+e1_diff_queue_aware_avg_price_usd_mwh_ci,"[-0.482, -0.09517]",fleet_paired.csv
+e1_rel_queue_aware_avg_price_usd_mwh,-0.0081023825610945,fleet_paired.csv
+e1_diff_queue_aware_empty_km_share,0.0004210334233942,fleet_paired.csv
+e1_diff_queue_aware_empty_km_share_ci,"[9.597e-05, 0.0007461]",fleet_paired.csv
+e1_rel_queue_aware_empty_km_share,0.0013408850059041,fleet_paired.csv
+e1_diff_threshold_100_service_rate,-0.0117603254655491,fleet_paired.csv
+e1_diff_threshold_100_service_rate_ci,"[-0.01446, -0.009062]",fleet_paired.csv
+e1_rel_threshold_100_service_rate,-0.0126803488950781,fleet_paired.csv
+e1_diff_threshold_100_wait_mean_min,0.1059454079279322,fleet_paired.csv
+e1_diff_threshold_100_wait_mean_min_ci,"[0.07324, 0.1386]",fleet_paired.csv
+e1_rel_threshold_100_wait_mean_min,0.0153771052247428,fleet_paired.csv
+e1_diff_threshold_100_energy_cost_usd_per_day,-53.61540908429168,fleet_paired.csv
+e1_diff_threshold_100_energy_cost_usd_per_day_ci,"[-64.06, -43.17]",fleet_paired.csv
+e1_rel_threshold_100_energy_cost_usd_per_day,-0.099582178692349,fleet_paired.csv
+e1_diff_threshold_100_peak_charging_mw,-0.935014637779512,fleet_paired.csv
+e1_diff_threshold_100_peak_charging_mw_ci,"[-1.01, -0.8598]",fleet_paired.csv
+e1_rel_threshold_100_peak_charging_mw,-0.2995597691023994,fleet_paired.csv
+e1_diff_threshold_100_queue_wait_mean_min,21.59289800048481,fleet_paired.csv
+e1_diff_threshold_100_queue_wait_mean_min_ci,"[16.66, 26.53]",fleet_paired.csv
+e1_rel_threshold_100_queue_wait_mean_min,4.354034479015082,fleet_paired.csv
+e1_diff_threshold_100_avg_price_usd_mwh,-1.6919619823771703,fleet_paired.csv
+e1_diff_threshold_100_avg_price_usd_mwh_ci,"[-2.425, -0.9592]",fleet_paired.csv
+e1_rel_threshold_100_avg_price_usd_mwh,-0.0475037694426019,fleet_paired.csv
+e1_diff_threshold_100_empty_km_share,-0.0034358863167824,fleet_paired.csv
+e1_diff_threshold_100_empty_km_share_ci,"[-0.003859, -0.003013]",fleet_paired.csv
+e1_rel_threshold_100_empty_km_share,-0.010942429242372,fleet_paired.csv
+full_scale_service_threshold_80,0.9401668470890294,fleet_runs.csv
+full_scale_cost_usd_day_threshold_80,2714.6399485663997,fleet_runs.csv
+full_scale_runtime_s_threshold_80,62.77633095800411,fleet_runs.csv
+full_scale_requests_threshold_80,745473,fleet_runs.csv
+full_scale_fleet_threshold_80,2750,fleet_runs.csv
+full_scale_service_orchestrated,0.973682480787366,fleet_runs.csv
+full_scale_cost_usd_day_orchestrated,2231.212458404622,fleet_runs.csv
+full_scale_runtime_s_orchestrated,66.63050270799431,fleet_runs.csv
+full_scale_requests_orchestrated,745473,fleet_runs.csv
+full_scale_fleet_orchestrated,2750,fleet_runs.csv
+fleet_needed_95_threshold_80,586.6876620930819,fleet_runs.csv
+fleet_needed_95_orchestrated,526.4974608877202,fleet_runs.csv
+fleet_saving_95_pct,0.10259326230012344,fleet_runs.csv
+fleet_needed_96_threshold_80,609.0099541487617,fleet_runs.csv
+fleet_needed_96_orchestrated,545.4718032968096,fleet_runs.csv
+fleet_saving_96_pct,0.10433023371639627,fleet_runs.csv
+e2_service_orchestrated_24,0.9612643788287525,fleet_runs.csv
+e2_service_orchestrated_30,0.9621628650097386,fleet_runs.csv
+e2_service_orchestrated_36,0.9623864841297589,fleet_runs.csv
+e2_service_orchestrated_48,0.9628024010927724,fleet_runs.csv
+e2_service_orchestrated_72,0.9634979346400779,fleet_runs.csv
+e2_service_queue_aware_24,0.9220100216752608,fleet_runs.csv
+e2_service_queue_aware_30,0.9286699729072461,fleet_runs.csv
+e2_service_queue_aware_36,0.931105173465134,fleet_runs.csv
+e2_service_queue_aware_48,0.93359071469293,fleet_runs.csv
+e2_service_queue_aware_72,0.9355253681347188,fleet_runs.csv
+e2_service_threshold_80_24,0.9229047793824852,fleet_runs.csv
+e2_service_threshold_80_30,0.9270862766575376,fleet_runs.csv
+e2_service_threshold_80_36,0.9313891544515414,fleet_runs.csv
+e2_service_threshold_80_48,0.9346343594504049,fleet_runs.csv
+e2_service_threshold_80_72,0.9340625515003075,fleet_runs.csv
+e5_charge_km_per_vehicle_day_busiest_6,3.3067265001256865,fleet_runs.csv
+e5_service_busiest_6,0.9326643341558594,fleet_runs.csv
+e5_charge_km_per_vehicle_day_pmedian_1,4.477107345580599,fleet_runs.csv
+e5_service_pmedian_1,0.9329434597138282,fleet_runs.csv
+e5_charge_km_per_vehicle_day_pmedian_12,2.0991996123285586,fleet_runs.csv
+e5_service_pmedian_12,0.9282209479450536,fleet_runs.csv
+e5_charge_km_per_vehicle_day_pmedian_3,3.26362656950004,fleet_runs.csv
+e5_service_pmedian_3,0.9324009503928838,fleet_runs.csv
+e5_charge_km_per_vehicle_day_pmedian_6,2.4754148568708203,fleet_runs.csv
+e5_service_pmedian_6,0.931105173465134,fleet_runs.csv
+layout_minutes_to_depot_pmedian_6,6.470554197695626,fleet_layouts.csv
+layout_minutes_to_depot_busiest_6,9.06391506352032,fleet_layouts.csv
+layout_minutes_to_depot_pmedian_1,12.854057705992757,fleet_layouts.csv
+layout_minutes_to_depot_pmedian_3,8.098690354408095,fleet_layouts.csv
+layout_minutes_to_depot_pmedian_12,5.576991788675516,fleet_layouts.csv
+stress_service_E1_main_orchestrated,0.9623864841297589,fleet_runs.csv
+stress_cost_E1_main_orchestrated,459.46262584180306,fleet_runs.csv
+stress_service_E1_main_queue_aware,0.931105173465134,fleet_runs.csv
+stress_cost_E1_main_queue_aware,541.9538810755555,fleet_runs.csv
+stress_service_E1_main_threshold_100,0.9189313480094138,fleet_runs.csv
+stress_cost_E1_main_threshold_100,486.6555355878629,fleet_runs.csv
+stress_service_E1_main_threshold_80,0.9313891544515414,fleet_runs.csv
+stress_cost_E1_main_threshold_80,543.8175957055702,fleet_runs.csv
+stress_service_E4_cold_minus5C_orchestrated,0.9393109037540539,fleet_runs.csv
+stress_cost_E4_cold_minus5C_orchestrated,923.6622774426563,fleet_runs.csv
+stress_service_E4_cold_minus5C_queue_aware,0.9219766400425196,fleet_runs.csv
+stress_cost_E4_cold_minus5C_queue_aware,884.1569345476145,fleet_runs.csv
+stress_service_E4_cold_minus5C_threshold_100,0.891537031400113,fleet_runs.csv
+stress_cost_E4_cold_minus5C_threshold_100,838.517499799227,fleet_runs.csv
+stress_service_E4_cold_minus5C_threshold_80,0.922198872480026,fleet_runs.csv
+stress_cost_E4_cold_minus5C_threshold_80,883.8095617943886,fleet_runs.csv
+stress_service_E4_demand_plus20pct_orchestrated,0.908405157624932,fleet_runs.csv
+stress_cost_E4_demand_plus20pct_orchestrated,501.7382834693151,fleet_runs.csv
+stress_service_E4_demand_plus20pct_queue_aware,0.871613559006146,fleet_runs.csv
+stress_cost_E4_demand_plus20pct_queue_aware,521.7148393116787,fleet_runs.csv
+stress_service_E4_demand_plus20pct_threshold_100,0.8614962081674014,fleet_runs.csv
+stress_cost_E4_demand_plus20pct_threshold_100,542.3246004611174,fleet_runs.csv
+stress_service_E4_demand_plus20pct_threshold_80,0.8692151926580153,fleet_runs.csv
+stress_cost_E4_demand_plus20pct_threshold_80,517.4692401931511,fleet_runs.csv
+stress_service_E4_outage_biggest_depot_orchestrated,0.9626228715449076,fleet_runs.csv
+stress_cost_E4_outage_biggest_depot_orchestrated,459.3262424423299,fleet_runs.csv
+stress_service_E4_outage_biggest_depot_queue_aware,0.9313763092947727,fleet_runs.csv
+stress_cost_E4_outage_biggest_depot_queue_aware,543.1571608149928,fleet_runs.csv
+stress_service_E4_outage_biggest_depot_threshold_100,0.9210419219123158,fleet_runs.csv
+stress_cost_E4_outage_biggest_depot_threshold_100,485.97578133035194,fleet_runs.csv
+stress_service_E4_outage_biggest_depot_threshold_80,0.9276088027434317,fleet_runs.csv
+stress_cost_E4_outage_biggest_depot_threshold_80,540.6502835754194,fleet_runs.csv
+ablation_service_orch_no_preemption,0.9580488776148114,fleet_ablation_runs.csv
+ablation_cost_orch_no_preemption,450.6780140772844,fleet_ablation_runs.csv
+ablation_service_orch_no_price_signal,0.9614967858688299,fleet_ablation_runs.csv
+ablation_cost_orch_no_price_signal,458.2339373186788,fleet_ablation_runs.csv
+ablation_service_orch_no_reserve,0.9617306573337845,fleet_ablation_runs.csv
+ablation_cost_orch_no_reserve,452.5909321729721,fleet_ablation_runs.csv
+ablation_service_orch_no_scarce_trigger,0.9592469921732311,fleet_ablation_runs.csv
+ablation_cost_orch_no_scarce_trigger,480.6654804491175,fleet_ablation_runs.csv
+ablation_service_orch_no_topups,0.9514536022793423,fleet_ablation_runs.csv
+ablation_cost_orch_no_topups,527.714248119116,fleet_ablation_runs.csv
+ablation_service_orch_topups_only,0.9444142308765967,fleet_ablation_runs.csv
+ablation_cost_orch_topups_only,465.32557567014055,fleet_ablation_runs.csv
+ablation_service_orchestrated,0.9620623023718462,fleet_ablation_runs.csv
+ablation_cost_orchestrated,457.7212737398917,fleet_ablation_runs.csv
+ablation_service_threshold_80,0.9302533402142359,fleet_ablation_runs.csv
+ablation_cost_threshold_80,546.4316228520314,fleet_ablation_runs.csv
+travel_time_mae_min_od_x_time_of_day,3.3194254329300708,nyc_travel_time_validation.csv
+travel_time_trips_od_x_time_of_day,952699,nyc_travel_time_validation.csv
+travel_time_mae_min_od_only,3.7351139241884312,nyc_travel_time_validation.csv
+travel_time_trips_od_only,952699,nyc_travel_time_validation.csv
+travel_time_mae_min_constant_speed,5.057524213339482,nyc_travel_time_validation.csv
+travel_time_trips_constant_speed,952699,nyc_travel_time_validation.csv
+forecast_mape_seasonal_naive_1wk,0.1140108579593075,nyc_demand_forecast_eval.csv
+forecast_mape_profile_mean,0.0845382617476527,nyc_demand_forecast_eval.csv
+forecast_mape_profile_x_level,0.0603915582976237,nyc_demand_forecast_eval.csv
+pa_sessions_raw,259415,pa_data_quality.csv
+pa_sessions_kept,259323,pa_data_quality.csv
+pa_dwell_mae_global_median,1.2090834112385092,pa_dwell_point.csv
+pa_dwell_mae_site_x_weekend_x_hour_median,1.1041528499546318,pa_dwell_point.csv
+pa_dwell_mae_user_history_else_site_hour,0.9336297968966244,pa_dwell_point.csv
+pa_dwell_mae_gbm_quantile_median,0.8663516280091049,pa_dwell_point.csv
+pa_dwell_coverage_raw_quantile_10_90,0.7845830240039594,pa_dwell_intervals.csv
+pa_dwell_width_raw_quantile_10_90,2.5132737789646047,pa_dwell_intervals.csv
+pa_dwell_coverage_cqr_calibrated,0.8060298605955621,pa_dwell_intervals.csv
+pa_dwell_width_cqr_calibrated,2.655338368821874,pa_dwell_intervals.csv
+pa_energy_mae_global_median,5.426325991916193,pa_energy_point.csv
+pa_energy_mae_site_x_weekend_x_hour_median,5.220722985461519,pa_energy_point.csv
+pa_energy_mae_user_history_else_site_hour,3.9928253447842255,pa_energy_point.csv
+pa_energy_mae_gbm_quantile_median,3.624892483608692,pa_energy_point.csv
+pa_energy_coverage_raw_quantile_10_90,0.7747669718716489,pa_energy_intervals.csv
+pa_energy_width_raw_quantile_10_90,10.380057045969718,pa_energy_intervals.csv
+pa_energy_coverage_cqr_calibrated,0.7952651983832385,pa_energy_intervals.csv
+pa_energy_width_cqr_calibrated,10.794955017925016,pa_energy_intervals.csv
+pa_shift_static_cov_jul_dec_2020,0.7628668674319053,pa_dwell_shift.csv
+pa_shift_rolling_cov_jul_dec_2020,0.8053020851705176,pa_dwell_shift.csv
+pa_shift_static_cov_min,0.7281976744186046,pa_dwell_shift.csv
+pa_shift_rolling_cov_min,0.7474332648870636,pa_dwell_shift.csv
+pa_dwell_coverage_anonymous,0.7456140350877193,pa_dwell_segments.csv
+fee_its_60_sessions,-0.2861293903947013,pa_fee_effects.csv
+fee_its_60_sessions_ci,"[-0.323, -0.248]",pa_fee_effects.csv
+fee_its_90_sessions,-0.2853801864702949,pa_fee_effects.csv
+fee_its_90_sessions_ci,"[-0.322, -0.247]",pa_fee_effects.csv
+fee_its_120_sessions,-0.2979405134311016,pa_fee_effects.csv
+fee_its_120_sessions_ci,"[-0.358, -0.232]",pa_fee_effects.csv
+fee_its_180_sessions,-0.3370549006277867,pa_fee_effects.csv
+fee_its_180_sessions_ci,"[-0.391, -0.278]",pa_fee_effects.csv
+fee_yoy_did_sessions,-0.433859549656202,pa_fee_effects.csv
+fee_yoy_did_sessions_ci,"[-0.461, -0.405]",pa_fee_effects.csv
+fee_yoy_placebo_2016_sessions,0.0977018511003167,pa_fee_effects.csv
+fee_yoy_placebo_2016_sessions_ci,"[0.040, 0.158]",pa_fee_effects.csv
+fee_its_60_energy_kwh,-0.4067796312420862,pa_fee_effects.csv
+fee_its_60_energy_kwh_ci,"[-0.448, -0.363]",pa_fee_effects.csv
+fee_its_90_energy_kwh,-0.4135032121024232,pa_fee_effects.csv
+fee_its_90_energy_kwh_ci,"[-0.450, -0.375]",pa_fee_effects.csv
+fee_its_120_energy_kwh,-0.4306940971697864,pa_fee_effects.csv
+fee_its_120_energy_kwh_ci,"[-0.481, -0.376]",pa_fee_effects.csv
+fee_its_180_energy_kwh,-0.4660973605143597,pa_fee_effects.csv
+fee_its_180_energy_kwh_ci,"[-0.511, -0.417]",pa_fee_effects.csv
+fee_yoy_did_energy_kwh,-0.5124310286331527,pa_fee_effects.csv
+fee_yoy_did_energy_kwh_ci,"[-0.535, -0.488]",pa_fee_effects.csv
+fee_yoy_placebo_2016_energy_kwh,0.0211449086684447,pa_fee_effects.csv
+fee_yoy_placebo_2016_energy_kwh_ci,"[-0.051, 0.099]",pa_fee_effects.csv
+fee_its_60_users,-0.2971190409282597,pa_fee_effects.csv
+fee_its_60_users_ci,"[-0.330, -0.263]",pa_fee_effects.csv
+fee_its_90_users,-0.2936694135047967,pa_fee_effects.csv
+fee_its_90_users_ci,"[-0.329, -0.257]",pa_fee_effects.csv
+fee_its_120_users,-0.3010346184788512,pa_fee_effects.csv
+fee_its_120_users_ci,"[-0.358, -0.239]",pa_fee_effects.csv
+fee_its_180_users,-0.3276842502722691,pa_fee_effects.csv
+fee_its_180_users_ci,"[-0.375, -0.277]",pa_fee_effects.csv
+fee_yoy_did_users,-0.4119743206887479,pa_fee_effects.csv
+fee_yoy_did_users_ci,"[-0.437, -0.385]",pa_fee_effects.csv
+fee_yoy_placebo_2016_users,0.0712239306685187,pa_fee_effects.csv
+fee_yoy_placebo_2016_users_ci,"[0.014, 0.131]",pa_fee_effects.csv
+fee_its_60_mean_energy,-0.1690085559259719,pa_fee_effects.csv
+fee_its_60_mean_energy_ci,"[-0.197, -0.140]",pa_fee_effects.csv
+fee_its_90_mean_energy,-0.1792883757298757,pa_fee_effects.csv
+fee_its_90_mean_energy_ci,"[-0.201, -0.157]",pa_fee_effects.csv
+fee_its_120_mean_energy,-0.1890916457627794,pa_fee_effects.csv
+fee_its_120_mean_energy_ci,"[-0.208, -0.170]",pa_fee_effects.csv
+fee_its_180_mean_energy,-0.1946502960935547,pa_fee_effects.csv
+fee_its_180_mean_energy_ci,"[-0.211, -0.178]",pa_fee_effects.csv
+fee_yoy_did_mean_energy,-0.138784428721242,pa_fee_effects.csv
+fee_yoy_did_mean_energy_ci,"[-0.162, -0.115]",pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_energy,-0.0697429291525132,pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_energy_ci,"[-0.106, -0.032]",pa_fee_effects.csv
+fee_its_60_mean_connected_h,-0.2750784484298124,pa_fee_effects.csv
+fee_its_60_mean_connected_h_ci,"[-0.302, -0.247]",pa_fee_effects.csv
+fee_its_90_mean_connected_h,-0.2946445464558824,pa_fee_effects.csv
+fee_its_90_mean_connected_h_ci,"[-0.323, -0.265]",pa_fee_effects.csv
+fee_its_120_mean_connected_h,-0.2991568156636256,pa_fee_effects.csv
+fee_its_120_mean_connected_h_ci,"[-0.323, -0.274]",pa_fee_effects.csv
+fee_its_180_mean_connected_h,-0.2743878939067592,pa_fee_effects.csv
+fee_its_180_mean_connected_h_ci,"[-0.295, -0.253]",pa_fee_effects.csv
+fee_yoy_did_mean_connected_h,-0.2343950991910877,pa_fee_effects.csv
+fee_yoy_did_mean_connected_h_ci,"[-0.260, -0.208]",pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_connected_h,-0.0581146272507977,pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_connected_h_ci,"[-0.094, -0.021]",pa_fee_effects.csv
+fee_its_60_mean_idle_h,-0.6166388982927774,pa_fee_effects.csv
+fee_its_60_mean_idle_h_ci,"[-0.670, -0.554]",pa_fee_effects.csv
+fee_its_90_mean_idle_h,-0.6460909238368742,pa_fee_effects.csv
+fee_its_90_mean_idle_h_ci,"[-0.702, -0.580]",pa_fee_effects.csv
+fee_its_120_mean_idle_h,-0.6491409258874438,pa_fee_effects.csv
+fee_its_120_mean_idle_h_ci,"[-0.697, -0.594]",pa_fee_effects.csv
+fee_its_180_mean_idle_h,-0.5670242346952267,pa_fee_effects.csv
+fee_its_180_mean_idle_h_ci,"[-0.627, -0.498]",pa_fee_effects.csv
+fee_yoy_did_mean_idle_h,-0.5032080370025018,pa_fee_effects.csv
+fee_yoy_did_mean_idle_h_ci,"[-0.562, -0.437]",pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_idle_h,-0.1449981452234267,pa_fee_effects.csv
+fee_yoy_placebo_2016_mean_idle_h_ci,"[-0.244, -0.032]",pa_fee_effects.csv
+segment_fee_change_evening charge and go,-0.28551671740910844,pa_segments_fee_shift.csv
+"segment_fee_change_evening long park, mostly idle",-0.6925287422670892,pa_segments_fee_shift.csv
+segment_fee_change_midday quick top-up,-0.2252761437798375,pa_segments_fee_shift.csv
+segment_fee_change_morning charge and go,-0.3025410554162229,pa_segments_fee_shift.csv
+"segment_fee_change_morning charge, then linger",-0.47882268722934584,pa_segments_fee_shift.csv
+segments_k,5,pa_segments_selection.csv
+segments_silhouette,0.292881748703209,pa_segments_selection.csv
+segments_stability_ari,0.9974639896424043,pa_segments_selection.csv
+cohort_2017_retention_did,-0.0241617291623117,pa_fee_cohorts.csv
+cohort_2017_retention_ci,"[-0.049, 0.002]",pa_fee_cohorts.csv
+cohort_2017_stayer_log_change_sessions_did,-0.1814753537297179,pa_fee_cohorts.csv
+cohort_2017_stayer_log_change_sessions_ci,"[-0.256, -0.105]",pa_fee_cohorts.csv
+cohort_2017_stayer_change_kwh_did,-0.1582114810659526,pa_fee_cohorts.csv
+cohort_2017_stayer_change_kwh_ci,"[-0.487, 0.126]",pa_fee_cohorts.csv
+cohort_2017_stayer_change_idle_h_did,-0.1234277055624234,pa_fee_cohorts.csv
+cohort_2017_stayer_change_idle_h_ci,"[-0.182, -0.063]",pa_fee_cohorts.csv
+cohort_2016_retention_did,0.007448719304715,pa_fee_cohorts.csv
+cohort_2016_retention_ci,"[-0.023, 0.036]",pa_fee_cohorts.csv
+cohort_2016_stayer_log_change_sessions_did,-0.1967751053601256,pa_fee_cohorts.csv
+cohort_2016_stayer_log_change_sessions_ci,"[-0.280, -0.106]",pa_fee_cohorts.csv
+cohort_2016_stayer_change_kwh_did,-0.4104781036938025,pa_fee_cohorts.csv
+cohort_2016_stayer_change_kwh_ci,"[-0.767, -0.059]",pa_fee_cohorts.csv
+cohort_2016_stayer_change_idle_h_did,-0.1126220394880046,pa_fee_cohorts.csv
+cohort_2016_stayer_change_idle_h_ci,"[-0.192, -0.030]",pa_fee_cohorts.csv
+site_full_share_weekday_9_17_WEBSTER,0.1962404214559387,pa_site_congestion.csv
+site_full_share_weekday_9_17_HIGH,0.046455938697318,pa_site_congestion.csv
+site_full_share_weekday_9_17_TED THOMPSON,0.0195162835249042,pa_site_congestion.csv

@@ -1,0 +1,23 @@
+# environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+
+# python caches and build output
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# data is downloaded by `make data` and never committed (licences, size)
+data/
+
+# secrets
+.env
+.env.*
