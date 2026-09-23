@@ -312,6 +312,6 @@ cohort_2016_stayer_change_kwh_did,-0.4104781036938025,pa_fee_cohorts.csv
 cohort_2016_stayer_change_kwh_ci,"[-0.767, -0.059]",pa_fee_cohorts.csv
 cohort_2016_stayer_change_idle_h_did,-0.1126220394880046,pa_fee_cohorts.csv
 cohort_2016_stayer_change_idle_h_ci,"[-0.192, -0.030]",pa_fee_cohorts.csv
+site_full_share_weekday_9_17_HAMILTON,0.2495210727969348,pa_site_congestion.csv
 site_full_share_weekday_9_17_WEBSTER,0.1962404214559387,pa_site_congestion.csv
-site_full_share_weekday_9_17_HIGH,0.046455938697318,pa_site_congestion.csv
-site_full_share_weekday_9_17_TED THOMPSON,0.0195162835249042,pa_site_congestion.csv
+site_full_share_weekday_9_17_RINCONADA LIB,0.0494492337164751,pa_site_congestion.csv

@@ -65,7 +65,7 @@ SOURCES: dict[str, Source] = {
             "https://data.paloalto.gov/datasets/194693-electric-vehicle-charging-station-usage-july-2011-dec-2020.download/",
             "palo_alto_ev_sessions_2011_2020.csv",
             "Open Data Commons PDDL (City of Palo Alto Open Data)",
-            "City of Palo Alto EV charging station usage, Jul 2011 - Dec 2020 (ChargePoint export)",
+            "City of Palo Alto EV charging station usage, July 2011 to December 2020 (ChargePoint export)",
         ),
         Source(
             "tlc_yellow",

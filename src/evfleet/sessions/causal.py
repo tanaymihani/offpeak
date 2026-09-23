@@ -1,7 +1,7 @@
 """What happened when Palo Alto started charging $0.23/kWh on 1 August 2017?
 
 Every station switched from free to paid on the same day, so there is no
-untreated comparison station. Three complementary quasi-experimental designs:
+untreated comparison station. I use three quasi-experimental designs:
 
 1. Interrupted time series (regression discontinuity in time) on a daily panel
    of stations operating throughout, with separate pre/post trends,
@@ -10,15 +10,16 @@ untreated comparison station. Three complementary quasi-experimental designs:
 2. Year-over-year difference-in-differences: each day in 2017 is compared with
    the same weekday 364 days earlier, and the post-August change in that
    year-over-year growth is the effect. A placebo runs the identical analysis on
-   2016 vs 2015 with a fake 1 August 2016 fee date, where the effect should be ~0.
+   2016 vs 2015 with a fake 1 August 2016 fee date, where the effect should be close to zero.
 3. User cohorts: of the drivers who charged in Feb-Jul, how many kept charging
-   in Aug-Dec, and how did the stayers' behaviour change - 2017 vs 2016, with
-   2016 vs 2015 as a placebo, and bootstrap intervals over drivers.
+   in Aug-Dec, and how did the remaining drivers change their charging? 2017 is
+   compared with 2016, 2016 vs 2015 is the placebo, and intervals come from a
+   bootstrap over drivers.
 
 Identifying assumption (2, 3): absent the fee, 2017 would have followed 2016's
 seasonal pattern around a smooth growth trend. The fee is a price on *these*
-public stations; drivers may have shifted to other chargers we cannot observe,
-so effects are on demand at city stations, not on total EV charging.
+public stations. Drivers may have moved to other chargers the data cannot see,
+so the effects are on demand at the city's stations, not on EV charging overall.
 """
 
 from __future__ import annotations

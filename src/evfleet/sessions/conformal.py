@@ -2,10 +2,10 @@
 
 Split conformal: with calibration nonconformity scores s_1..s_n and miscoverage
 alpha, the interval correction is the k-th smallest score with
-k = ceil((n + 1)(1 - alpha)). If k > n the correction is +inf (the honest answer
-when there is too little calibration data). Under exchangeability this gives
-marginal coverage >= 1 - alpha; market-like time series are not exchangeable,
-so coverage is *measured* on held-out time periods rather than assumed.
+k = ceil((n + 1)(1 - alpha)). If k > n the correction is +inf, because there is
+not enough calibration data for that coverage level. Under exchangeability this
+gives marginal coverage >= 1 - alpha. Charging sessions over time are not
+exchangeable, so I measure coverage on held-out time periods instead of assuming it.
 
 For CQR the score of a calibration point with lower/upper quantile predictions
 (lo, hi) is max(lo - y, y - hi) (Romano, Patterson & Candes, 2019).

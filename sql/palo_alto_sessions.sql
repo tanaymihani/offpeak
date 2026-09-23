@@ -1,4 +1,4 @@
--- Palo Alto EV charging sessions (ChargePoint export, Jul 2011 - Dec 2020).
+-- Palo Alto EV charging sessions (ChargePoint export, July 2011 to December 2020).
 -- Parse and type every raw row, then attach a single `drop_reason`
 -- (NULL = kept). Rules are applied in priority order so each excluded row
 -- is counted exactly once in the data-quality report.
@@ -60,7 +60,7 @@ SELECT
         WHEN charging_s > connected_s + 60                     THEN 'charging_exceeds_connected'
         WHEN connected_s > 48 * 3600                           THEN 'connected_over_48h'
         WHEN energy_kwh IS NULL OR energy_kwh < 0              THEN 'invalid_energy'
-        -- Level-2 ports here deliver at most ~7 kW; >20 kW average is not physical.
+        -- Level 2 ports here deliver at most about 7 kW, so an average above 20 kW is not physical.
         WHEN charging_s > 0 AND energy_kwh / (charging_s / 3600.0) > 20 THEN 'implausible_power'
         WHEN charging_s = 0 AND energy_kwh >= 0.1              THEN 'energy_without_charging_time'
         ELSE NULL

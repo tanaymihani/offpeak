@@ -2,7 +2,7 @@
 
 Accepted power is ``min(charger_kw, c_rate(soc) * capacity)`` with a
 piecewise-linear C-rate curve (representative of lithium-ion fast charging:
-flat to ~50 %, tapering steeply above 80 %). Time-to-charge is tabulated once
+flat up to about 50%, tapering steeply above 80%). Time-to-charge is tabulated once
 by integrating ``capacity / P(soc)`` on a fine SoC grid, so
 
 * ``duration_s(s0, s1)`` is a table difference, and

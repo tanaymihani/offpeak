@@ -1,7 +1,7 @@
 """Which parts of the orchestrator produce its gains? Remove one component at a time.
 
-Runs on the test week with 6 paired seeds; this explains the mechanism behind the
-E1 result and is not used to choose any parameter. Output:
+Runs on the test week with 6 paired seeds. It explains where the E1 result comes
+from and is not used to choose any parameter. Output:
 reports/results/fleet_ablation.csv (paired differences vs threshold_80 and vs the full orchestrator).
 
     python scripts/run_fleet_ablation.py

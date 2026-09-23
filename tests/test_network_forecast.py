@@ -45,7 +45,7 @@ def test_network_recovers_known_structure():
 def test_level_adjusted_profile_tracks_a_level_shift():
     model = LevelAdjustedProfile(np.full(672, 10.0), alpha=0.3)
     for s in range(20):
-        model.update(s, 15.0)  # demand runs 50 % above profile
+        model.update(s, 15.0)  # demand runs 50% above profile
     assert model.forecast(20, horizon=4) == pytest.approx(60.0, rel=0.01)
 
 

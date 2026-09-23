@@ -10,7 +10,7 @@ Chronological splits (no shuffling):
     shift  2020-01 .. 2020-12   (COVID distribution shift; stress test)
 
 Models: three baselines, then gradient-boosted quantile regression
-(q = 0.1, 0.5, 0.9) on log targets, with CQR for calibrated 80 % intervals.
+(q = 0.1, 0.5, 0.9) on log targets, with CQR for calibrated 80% intervals.
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ SPLITS = {
     "test": ("2019-07-01", "2020-01-01"),
     "shift": ("2020-01-01", "2021-01-01"),
 }
-ALPHA = 0.2  # 80 % intervals
+ALPHA = 0.2  # 80% intervals
 QUANTILES = (0.1, 0.5, 0.9)
 
 FEATURES = [

@@ -23,8 +23,8 @@ from evfleet.paths import FIGURES, RESULTS, ensure_dirs  # noqa: E402
 SURFACE, INK, INK2, MUTED, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#8f8e89", "#e7e6e2"
 BLUE, ORANGE, AQUA, YELLOW = "#2a78d6", "#eb6834", "#1baf7a", "#eda100"
 POLICY_COLOR = {"orchestrated": BLUE, "threshold_80": ORANGE, "queue_aware": AQUA, "threshold_100": YELLOW}
-POLICY_LABEL = {"orchestrated": "Orchestrated", "threshold_80": "Threshold 20% -> 80%",
-                "queue_aware": "Queue-aware depot choice", "threshold_100": "Threshold 20% -> 100%"}
+POLICY_LABEL = {"orchestrated": "Orchestrated", "threshold_80": "Threshold, 20% to 80%",
+                "queue_aware": "Queue-aware depot choice", "threshold_100": "Threshold, 20% to 100%"}
 SEQ = LinearSegmentedColormap.from_list("blue_seq", ["#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"])
 
 plt.rcParams.update({
@@ -99,7 +99,7 @@ def pa_fee_effects() -> None:
               "mean_energy": "kWh / session", "mean_connected_h": "Connection time / session",
               "mean_idle_h": "Idle time / session"}
     designs = [("yoy_did", "Year-over-year DiD (2017 vs 2016)", BLUE, -0.22),
-               ("its", "Interrupted time series (+/-120 days)", ORANGE, 0.0),
+               ("its", "Interrupted time series (120 days each side)", ORANGE, 0.0),
                ("yoy_placebo_2016", "Placebo: fake fee on 1 Aug 2016", MUTED, 0.22)]
     fig, ax = plt.subplots(figsize=(8.2, 4.4))
     order = list(labels)
@@ -172,7 +172,7 @@ def pa_shift() -> None:
     ax.text(pd.Timestamp("2020-03-20"), 52, "shelter-in-place", color=INK2, fontsize=8.5)
     ax.set_ylim(50, 100)
     ax.set_ylabel("coverage of 80% interval, %")
-    ax.set_title("COVID shift (2020): static intervals under-cover; nightly recalibration recovers by July")
+    ax.set_title("During COVID (2020), fixed intervals under-cover and nightly recalibration recovers by July")
     ax.legend(loc="lower right", fontsize=8.5)
     save(fig, "pa_conformal_shift.png")
 
@@ -220,20 +220,29 @@ def pa_congestion() -> None:
     summary = pd.read_csv(RESULTS / "pa_site_congestion.csv", index_col=0)
     sites = summary.index.tolist()
     m = by_hour[sites].T * 100
-    fig, ax = plt.subplots(figsize=(9.5, 3.8))
-    im = ax.imshow(m.to_numpy(), aspect="auto", cmap=SEQ, vmin=0, vmax=max(10, float(m.to_numpy().max())))
+    # sequential ramp whose zero end sits on the surface, so "never full" reads as empty
+    cmap = LinearSegmentedColormap.from_list("blue_seq0", ["#f6f9fe", "#b7d3f6", "#5598e7", "#1c5cab", "#0d366b"])
+    fig, ax = plt.subplots(figsize=(9.5, 3.9))
+    im = ax.imshow(m.to_numpy(), aspect="auto", cmap=cmap, vmin=0, vmax=float(np.ceil(m.to_numpy().max() / 5) * 5))
+    names = {"MPL": "Mitchell Park Library", "RINCONADA LIB": "Rinconada Library"}
+
     def site_label(name: str) -> str:
-        pretty = " ".join(w if w in {"MPL"} else w.title() for w in name.split())
-        return f"{pretty} ({int(summary.loc[name, 'ports'])} ports)"
+        pretty = names.get(name, name.title())
+        lo, hi = int(summary.loc[name, "ports_min_month"]), int(summary.loc[name, "ports_max"])
+        return f"{pretty} ({lo} ports)" if lo == hi else f"{pretty} ({lo}-{hi} ports)"
 
     ax.set_yticks(range(len(sites)), [site_label(s) for s in sites])
     ax.set_xticks(range(0, 24, 2), [f"{h:02d}" for h in range(0, 24, 2)])
     ax.set_xlabel("hour of day (weekdays, 2019)")
     ax.grid(False)
-    cb = fig.colorbar(im, ax=ax, pad=0.01)
-    cb.set_label("% of time every port is occupied", color=INK2)
+    for k, site in enumerate(sites):
+        share = summary.loc[site, "weekday_9_17_share_full"] * 100
+        ax.text(23.6, k, f"{share:.0f}%", va="center", ha="left", fontsize=8.5, color=INK)
+    ax.text(23.6, -0.95, "full,\n9am-5pm", va="center", ha="left", fontsize=7.5, color=INK2)
+    cb = fig.colorbar(im, ax=ax, pad=0.08)
+    cb.set_label("% of time every port is taken", color=INK2)
     cb.outline.set_visible(False)
-    ax.set_title("Where drivers find no free port: share of time each site is full")
+    ax.set_title("How often each Palo Alto site has no free port")
     save(fig, "pa_site_congestion.png")
 
 
@@ -265,7 +274,7 @@ def fleet_policy_comparison() -> None:
         ax.set_ylim(-0.6, len(pols) - 0.4)
     axes[0].set_yticks(range(len(pols)), [POLICY_LABEL[p] for p in pols])
     axes[0].invert_yaxis()
-    fig.suptitle("Change vs the threshold 20%->80% baseline, test week, 10 paired seeds (95% CI)", x=0.01,
+    fig.suptitle("Change against the threshold baseline (20% to 80%), test week, 10 paired seeds, 95% CI", x=0.01,
                  ha="left", fontsize=11.5, fontweight="semibold", y=1.06)
     save(fig, "fleet_policy_comparison.png")
 
@@ -276,7 +285,7 @@ def fleet_load_shift() -> None:
     base = hp[hp.policy == "threshold_80"].sort_values("hour")
     axes[0].plot(base.hour, base.requests_per_day, color=MUTED)
     axes[0].set_ylabel("requests / hour")
-    axes[0].set_title("Ride demand (20% replica of Manhattan yellow-taxi trips)")
+    axes[0].set_title("Ride demand (20% sample of Manhattan yellow-taxi trips)")
     axes[1].plot(base.hour, base.lbmp_usd_mwh, color=MUTED)
     axes[1].set_ylabel("$/MWh")
     axes[1].set_title("NYC day-ahead wholesale electricity price (NYISO zone J), test-week mean")
@@ -331,7 +340,7 @@ def fleet_size() -> None:
         ax.plot(m.index, m.to_numpy(), "-o", color=POLICY_COLOR[p], ms=5, mec=SURFACE, label=POLICY_LABEL[p])
     ax.axhline(98, color=MUTED, lw=1)
     ax.text(r.fleet_n.min(), 98.1, "98% service", color=INK2, fontsize=8.5, va="bottom")
-    ax.set_xlabel("fleet size (vehicles, 20% demand replica)")
+    ax.set_xlabel("fleet size (vehicles, 20% demand sample)")
     ax.set_ylabel("riders served, %")
     ax.set_title("Fleet size needed for a service level")
     ax.legend(fontsize=8.5, loc="lower right")
@@ -340,8 +349,8 @@ def fleet_size() -> None:
 
 def fleet_stress() -> None:
     runs = read("fleet_runs.csv")
-    scen = [("E1_main", "Base week"), ("E4_cold_minus5C", "Cold snap (-5 C all week)"),
-            ("E4_outage_biggest_depot", "Largest depot offline 16-22h"), ("E4_demand_plus20pct", "Demand +20%")]
+    scen = [("E1_main", "Base week"), ("E4_cold_minus5C", "Cold week (-5°C)"),
+            ("E4_outage_biggest_depot", "Largest depot offline 4pm to 10pm"), ("E4_demand_plus20pct", "Demand +20%")]
     pols = ["threshold_100", "threshold_80", "queue_aware", "orchestrated"]
     fig, ax = plt.subplots(figsize=(8.6, 3.8))
     seeds = sorted(runs[runs.label == "E4_cold_minus5C"].seed.unique())

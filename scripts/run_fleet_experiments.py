@@ -1,7 +1,8 @@
 """Run every fleet experiment reported in the README and save tidy results.
 
-All policy parameters were fixed on the validation week (13-20 April 2025);
-everything here except E0 runs on the held-out test week (21-28 April 2025).
+All policy parameters were fixed on the validation week (13-20 April 2025).
+Everything here except E0 runs on the held-out test week (22-28 April 2025,
+with 21 April as warm-up).
 Outputs: reports/results/fleet_runs.csv (one row per run) and
 reports/results/fleet_paired.csv (paired differences vs threshold_80).
 
@@ -66,7 +67,7 @@ def jobs(env, seeds: int, quick: bool):
 
 
 def paired(runs: pd.DataFrame, metrics: list[str], baseline: str = "threshold_80") -> pd.DataFrame:
-    """Mean paired difference (policy - baseline) across seeds with a 95 % t-interval."""
+    """Mean paired difference (policy minus baseline) across seeds with a 95% t-interval."""
     rows = []
     for label, g in runs.groupby("label"):
         if baseline not in set(g.policy):
@@ -89,7 +90,7 @@ def paired(runs: pd.DataFrame, metrics: list[str], baseline: str = "threshold_80
 
 
 def full_scale(env) -> pd.DataFrame:
-    """One seed at 100 % of demand (fleet and chargers scaled x5) as a scale check."""
+    """One seed at 100% of demand, with fleet and chargers scaled by 5, as a scale check."""
     js = [(p, base_config(env, fleet=2750, chargers=180, sites=6, seed=0, sample_frac=1.0), "E7_full_scale")
           for p in ("threshold_80", "orchestrated")]
     return run_grid(js, processes=2)

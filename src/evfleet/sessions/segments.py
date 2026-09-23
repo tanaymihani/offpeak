@@ -2,11 +2,11 @@
 
 Features describe *how* a session is used, all continuous: arrival time on the
 circle (sin/cos), log connection time, log energy and log idle time (plugged in
-but not charging). A Gaussian mixture was tried first; with ~260 k sessions its
-BIC kept falling up to the largest K tried, and binary or point-mass features
-produced degenerate components, so it gave no usable model-size answer. K-means
-with K chosen by the silhouette score, plus a seed-stability check (adjusted Rand
-index), is simpler and reproducible. Segment names come from centroid statistics
+but not charging). I tried a Gaussian mixture first. With about 260k sessions
+its BIC kept falling up to the largest K I tried, and binary or point-mass
+features produced degenerate components, so it never settled on a model size.
+K-means with K chosen by the silhouette score, plus a seed-stability check
+(adjusted Rand index), is simpler and reproducible. Segment names come from centroid statistics
 through a fixed rule so labels can be checked against the numbers.
 """
 

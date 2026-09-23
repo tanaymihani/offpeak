@@ -6,7 +6,7 @@ from evfleet.sim.charging import ChargeCurve
 
 def test_constant_power_segment_matches_closed_form():
     c = ChargeCurve(capacity_kwh=40.0, charger_kw=150.0)
-    # between 10 % and 50 % SoC the C-rate is flat at 2.5C = 100 kW
+    # between 10% and 50% SoC the C-rate is flat at 2.5C = 100 kW
     assert c.duration_s(0.1, 0.5) == pytest.approx(0.4 * 40.0 / 100.0 * 3600.0, rel=1e-6)
 
 
