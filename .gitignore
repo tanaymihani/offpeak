@@ -16,7 +16,7 @@ dist/
 .coverage
 
 # data is downloaded by `make data` and never committed (licences, size)
-data/
+/data/
 
 # secrets
 .env
